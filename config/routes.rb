@@ -1,10 +1,10 @@
-Rails.application.routes.draw do
+# frozen_string_literal: true
 
-  root :to => "web/board#show"
+Rails.application.routes.draw do
+  root to: 'web/board#show'
 
   scope module: :web do
-  	resource :session, only: [:new, :create, :destroy]
+    resource :session, only: %i[new create destroy]
     resource :board, only: :show
   end
 end
-

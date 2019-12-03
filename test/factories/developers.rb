@@ -2,8 +2,8 @@
 
 FactoryBot.define do
   factory :developer do
-  	first_name 
-    last_name 
+    first_name
+    last_name
     password { generate :string }
     email
   end
