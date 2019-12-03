@@ -12,7 +12,7 @@ class Session
   validates :password, presence: true
   validate :user_valid?
 
-  def user_valid
+  def user
     User.find_by(email: email)
   end
 
