@@ -12,7 +12,7 @@ class Session
   validates :password, presence: true
   validate :user_valid?
 
-  def user_valid
+  def user
     User.find_by(email: email)
   end
 
@@ -20,7 +20,8 @@ class Session
 
   def user_valid?
     if user.blank? || !user.authenticate(password)
-      errors.add(:email, "email or password doesn't match")
+      errors.add(:email, "email or password doesn't match" )
     end
   end
+
 end

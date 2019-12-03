@@ -1,6 +1,4 @@
-# frozen_string_literal: true
 
-module Concerns
   module AuthHelper
     def sign_in(user)
       session[:user_id] = user.id
@@ -20,8 +18,6 @@ module Concerns
 
     def current_user
       return if session[:user_id].blank?
-
       @_current_user ||= User.find_by(id: session[:user_id])
     end
   end
-end
