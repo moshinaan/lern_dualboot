@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 class Web::SessionsController < Web::ApplicationController
-
   def new
     @session = Session.new
   end
