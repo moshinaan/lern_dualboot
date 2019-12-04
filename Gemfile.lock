@@ -294,6 +294,7 @@ DEPENDENCIES
   sass-rails (>= 6)
   selenium-webdriver
   simple_form
+  simplecov
   slim-rails
   state_machines
   state_machines-activerecord
