@@ -38,6 +38,7 @@ group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
   gem 'pry-rails'
   gem 'simplecov'
+  gem 'coveralls',require: false
 end
 
 gem 'bcrypt', '~> 3.1.7'
