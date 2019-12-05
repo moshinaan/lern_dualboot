@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 p ENV
-if ENV['CI'] == 1
+if ENV['CI']
   require 'coveralls'
   Coveralls.wear!
 else
