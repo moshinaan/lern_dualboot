@@ -5,7 +5,7 @@ AllCops:
     - node_modules/**/*
     - bin/*
     - vendor/**/*
-    - db/shema.rb
+    - db/schema.rb
 Style/FrozenStringLiteralComment:
   Enabled: false
 Style/ClassAndModuleChildren:
