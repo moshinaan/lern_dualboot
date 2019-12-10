@@ -47,11 +47,11 @@ gem 'state_machines'
 gem 'state_machines-activerecord'
 group :development do
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
+  gem 'bullet'
   gem 'factory_bot_rails'
   gem 'listen', '>= 3.0.5', '< 3.2'
   gem 'rubocop'
   gem 'web-console', '>= 3.3.0'
-  gem 'bullet'
 end
 
 group :test do
