@@ -44,9 +44,9 @@ end
 gem 'bcrypt', '~> 3.1.7'
 gem 'simple_form'
 gem 'state_machines'
-gem 'state_machines-activerecord'
 group :development do
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
+  gem 'bullet'
   gem 'factory_bot_rails'
   gem 'listen', '>= 3.0.5', '< 3.2'
   gem 'rubocop'
