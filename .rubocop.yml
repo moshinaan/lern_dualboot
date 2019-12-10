@@ -5,6 +5,7 @@ AllCops:
     - node_modules/**/*
     - bin/*
     - vendor/**/*
+    - db/shema.rb
 Style/FrozenStringLiteralComment:
   Enabled: false
 Style/ClassAndModuleChildren:
