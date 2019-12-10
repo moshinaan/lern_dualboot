@@ -51,6 +51,7 @@ group :development do
   gem 'listen', '>= 3.0.5', '< 3.2'
   gem 'rubocop'
   gem 'web-console', '>= 3.3.0'
+  gem 'bullet'
 end
 
 group :test do
