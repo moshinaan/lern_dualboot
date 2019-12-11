@@ -32,7 +32,7 @@ gem 'less-rails' # Sprockets (what Rails 3.1 uses for its asset pipeline) suppor
 gem 'slim-rails'
 gem 'therubyracer'
 gem 'twitter-bootstrap-rails'
-
+gem 'rollbar'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
