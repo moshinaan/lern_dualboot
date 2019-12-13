@@ -26,9 +26,13 @@ gem 'newrelic_rpm'
 # gem 'image_processing', '~> 1.2'
 gem 'state_machines-activerecord'
 # Reduces boot times through caching; required in config/boot.rb
+gem 'active_model_serializers'
 gem 'bootsnap', '>= 1.4.2', require: false
 gem 'jquery-rails'
+gem 'kaminari'
 gem 'less-rails' # Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
+gem 'ransack', github: 'activerecord-hackery/ransack'
+gem 'responders'
 gem 'rollbar'
 gem 'slim-rails'
 gem 'therubyracer'
