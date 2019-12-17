@@ -14,3 +14,7 @@ require("channels")
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
+import WebpackerReact from 'webpacker-react'
+import TaskBoard from './components/TaskBoard'
+
+WebpackerReact.setup({TaskBoard})
