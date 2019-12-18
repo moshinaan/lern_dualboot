@@ -55,6 +55,6 @@ class Api::V1::TasksControllerTest < ActionController::TestCase
     delete :destroy, params: { id: task.id, format: :json }
     assert_response :success
 
-    assert !Task.where(id: task.id).exists?
+    assert !Task.exists?(id: task.id)
   end
 end
