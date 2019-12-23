@@ -1,4 +1,3 @@
 # frozen_string_literal: true
 
-class Manager < User
-end
+class Manager < User; end

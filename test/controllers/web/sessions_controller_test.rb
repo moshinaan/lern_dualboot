@@ -16,10 +16,7 @@ class Web::SessionsControllerTest < ActionDispatch::IntegrationTest
   test 'should post create' do
     password = generate(:string)
     user = create(:user, password: password)
-    attrs = {
-      email: user.email,
-      password: password
-    }
+    attrs = { email: user.email, password: password }
     post session_url, params: { session: attrs }
     assert_response :redirect
   end

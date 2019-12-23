@@ -20,18 +20,14 @@ class ActiveSupport::TestCase
   # Setup all fixtures in test/fixtures/*.yml for all tests in alphabetical order.
   fixtures :all
   include FactoryBot::Syntax::Methods
-
+  include AuthHelper
   # Add more helper methods to be used by all tests here...
 end
 
 module SignInHelper
   def sign_in_as(admin)
-    post session_path, params: {
-      session: {
-        password: admin.password,
-        email: admin.email
-      }
-    }
+    post session_path,
+         params: { session: { password: admin.password, email: admin.email } }
   end
 end
 
