@@ -17,25 +17,29 @@ class Api::V1::TasksControllerTest < ActionController::TestCase
     author = create :user
     sign_in(author)
     assignee = create :user
-    task_attributes = attributes_for(:task)
-                      .merge(author_id: author.id, assignee_id: assignee.id)
+    task_attributes =
+      attributes_for(:task).merge(
+        author_id: author.id, assignee_id: assignee.id
+      )
     post :create, params: { task: task_attributes, format: :json }
     assert_response :created
 
     data = JSON.parse(response.body)
     created_task = Task.find(data['id'])
 
-    assert created_task.present?
-    assert_equal task_attributes.stringify_keys, created_task.slice(*task_attributes.keys)
+    assert_equal task_attributes.stringify_keys,
+                 created_task.slice(*task_attributes.keys)
   end
 
   test 'should put update' do
     author = create :user
     assignee = create :user
     task = create :task, author: author
-    task_attributes = attributes_for(:task)
-                      .merge(author_id: author.id, assignee_id: assignee.id)
-                      .stringify_keys
+    task_attributes =
+      attributes_for(:task).merge(
+        author_id: author.id, assignee_id: assignee.id
+      )
+                           .stringify_keys
 
     patch :update, params: { id: task.id, format: :json, task: task_attributes }
     assert_response :success
@@ -50,6 +54,6 @@ class Api::V1::TasksControllerTest < ActionController::TestCase
     delete :destroy, params: { id: task.id, format: :json }
     assert_response :success
 
-    assert !Task.where(id: task.id).exists?
+    assert !Task.exists?(id: task.id)
   end
 end
