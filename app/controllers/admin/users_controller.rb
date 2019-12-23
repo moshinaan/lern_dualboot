@@ -21,7 +21,7 @@ class Admin::UsersController < Admin::ApplicationController
     if @user.save
       redirect_to admin_users_url
     else
-      render :new_admin_user_url
+      render :new
     end
   end
 
@@ -43,6 +43,12 @@ class Admin::UsersController < Admin::ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:first_name, :last_name, :email, :password, :type)
+    params.require(:user).permit(
+      :first_name,
+      :last_name,
+      :email,
+      :password,
+      :type
+    )
   end
 end

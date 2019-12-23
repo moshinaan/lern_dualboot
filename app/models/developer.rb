@@ -1,4 +1,3 @@
 # frozen_string_literal: true
 
-class Developer < User
-end
+class Developer < User; end
