@@ -25,7 +25,6 @@ services:
     image: busybox
     volumes:
       - bundle_cache:/bundle_cache
-
 volumes:
   bundle_cache:
 

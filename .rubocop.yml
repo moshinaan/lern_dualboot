@@ -27,7 +27,7 @@ Metrics/ModuleLength:
 Metrics/PerceivedComplexity:
   Max: 10
 Metrics/BlockLength:
-  Max: 30
+  Max: 40
 Style/NumericLiterals:
   Enabled: false
 Style/RegexpLiteral:
