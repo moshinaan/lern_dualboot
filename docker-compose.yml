@@ -26,6 +26,18 @@ services:
     volumes:
       - bundle_cache:/bundle_cache
 
+  webpacker:
+    image: username/railsproject:6.0.1
+    depends_on:
+      - app
+    env_file:
+      - .env.webpacker
+    command: ./bin/webpack-dev-server
+    volumes:
+      - .:/usr/src/app
+    ports:
+      - 3035:3035    
+
 volumes:
   bundle_cache:
 
