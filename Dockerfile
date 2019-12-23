@@ -17,3 +17,5 @@ COPY . /task_manager
 
 EXPOSE 3000
 CMD bundle exec rails s -b '0.0.0.0' -p 3000
+
+RUN RAILS_ENV=production bundle exec rake assets:precompile
